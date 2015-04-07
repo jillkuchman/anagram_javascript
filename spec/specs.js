@@ -13,4 +13,8 @@ describe("anagram", function() {
     it("returns multiple letter words that are perfect anagrams of the input word", function() {
         expect(anagram("to", "to, ot")).to.equal("to, ot");
     });
+
+    it("returns multiple letter words that are perfect anagrams of the input word disregarding capitalization", function() {
+        expect(anagram("TO", "to, Ot")).to.equal("to, Ot");
+    });
 });
