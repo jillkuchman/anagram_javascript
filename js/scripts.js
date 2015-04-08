@@ -42,8 +42,11 @@ $(document).ready( function() {
         console.log(user_list);
         if(user_list){
             if(user_list.length > 1) {
-                $(".matches").text(user_list);
-                $(".is_tense").text("s");
+                $(".is_tense").text("are");
+                $(".plural").text("s");
+            }
+            else {
+                $(".is_tense").text("is");
             }
             $("#result").show();
         }
